@@ -10,7 +10,6 @@
 }
 
 html {
-    overflow-x: hidden;
     height: 100%;
     background-color: #fff;
 }
@@ -51,7 +50,7 @@ nav a {
     position: relative;
 }
 
-nav a::after{
+nav a::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -61,7 +60,7 @@ nav a::after{
     transition: .3s ease-in-out;
 }
 
-nav a:hover::after{
+nav a:hover::after {
     transform: scaleX(1);
 }
 
@@ -76,7 +75,6 @@ nav a:hover::after{
     width: 100%;
     height: 170vh;
     position: relative;
-    /* overflow: hidden; */
     z-index: -1;
 }
 
@@ -193,6 +191,29 @@ nav a:hover::after{
     font-family: montserrat;
     color: #000;
     letter-spacing: 5px;
+    position: relative;
+}
+
+.container-galeria a::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #000;
+    transform-origin: left;
+    transform: scaleX(0);
+    bottom: 0;
+    left: 0;
+    transition: .3s;
+    z-index: -1;
+}
+
+.container-galeria a:hover::after {
+    transform: scaleX(1);
+}
+
+.container-galeria a:hover {
+    color: #fff;
 }
 
 /*-------------- SOBRE -----------------*/
@@ -396,7 +417,6 @@ nav a:hover::after{
 .post {
     width: 100%;
     height: 100%;
-    /* background-color: blue; */
     background-position: center;
     background-size: cover;
 }
