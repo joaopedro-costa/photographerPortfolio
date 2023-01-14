@@ -786,12 +786,3 @@ hr {
     transition: .3s;
     fill: #fff;
 }
-
-.scroll {
-    position: fixed;
-    top: 200px;
-    left: 100px;
-    background-color: #000;
-    color: #fff;
-    font-size: 2rem;
-}
