@@ -50,6 +50,9 @@ if (window.screen.width < 1100) {
         window.scroll(0, 0)
         if (menus.classList.contains('menu-ativo')) {
             menus.classList.remove('menu-ativo')
+            linha[0].classList.remove('ativo')
+            linha[1].classList.remove('ativo')
+            linha[2].classList.remove('ativo')
         }
     })
 
@@ -57,6 +60,9 @@ if (window.screen.width < 1100) {
         window.scroll(0, 870)
         if (menus.classList.contains('menu-ativo')) {
             menus.classList.remove('menu-ativo')
+            linha[0].classList.remove('ativo')
+            linha[1].classList.remove('ativo')
+            linha[2].classList.remove('ativo')
         }
     })
 
@@ -64,6 +70,9 @@ if (window.screen.width < 1100) {
         window.scroll(0, 3920)
         if (menus.classList.contains('menu-ativo')) {
             menus.classList.remove('menu-ativo')
+            linha[0].classList.remove('ativo')
+            linha[1].classList.remove('ativo')
+            linha[2].classList.remove('ativo')
         }
     })
 
@@ -71,6 +80,9 @@ if (window.screen.width < 1100) {
         window.scroll(0, 1550)
         if (menus.classList.contains('menu-ativo')) {
             menus.classList.remove('menu-ativo')
+            linha[0].classList.remove('ativo')
+            linha[1].classList.remove('ativo')
+            linha[2].classList.remove('ativo')
         }
     })
     mobile.addEventListener('click', function () {
