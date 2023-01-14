@@ -54,25 +54,23 @@ window.addEventListener('resize', function () {
         })
 
         trabalhos.addEventListener('click', function () {
-            window.scroll(0, 850)
+            window.scroll(0, 1100)
         })
 
         conquistas.addEventListener('click', function () {
-            window.scroll(0, 3660)
+            window.scroll(0, 4290)
         })
 
         sobre.addEventListener('click', function () {
-            window.scroll(0, 1511)
+            window.scroll(0, 2040)
         })
-        console.log('mobile')
-    } else {
-        console.log('desktop')
         mobile.addEventListener('click', function () {
             linha[0].classList.toggle('ativo')
             linha[1].classList.toggle('ativo')
             linha[2].classList.toggle('ativo')
             menus.classList.toggle('menu-ativo')
         })
+    } else {
 
         home.addEventListener('click', function () {
             window.scroll(0, 0)

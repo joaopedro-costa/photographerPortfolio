@@ -43,7 +43,7 @@ nav {
     transition: background-color .5s;
     padding: 2vh;
     position: fixed;
-    z-index: 99;
+    z-index: 999999;
 }
 
 nav img {
@@ -97,7 +97,7 @@ nav a:hover::after {
     position: relative;
 }
 
-svg {
+.arrow {
     position: absolute;
     width: 3%;
     fill: #fff;
@@ -412,6 +412,7 @@ svg {
     font-size: 110%;
     font-weight: 500;
     text-align: center;
+    line-height: 100%;
 }
 
 .depoimento .foto {
@@ -602,6 +603,7 @@ hr {
 }
 
 .container p {
+    font-size: 1rem;
     text-align: justify;
     justify-items: baseline;
     font-family: montserrat;

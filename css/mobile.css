@@ -1,3 +1,7 @@
+*::-webkit-scrollbar {
+    width: 0;
+}
+
 .menus {
     position: absolute;
     background-color: #000;
@@ -40,19 +44,15 @@ nav {
     gap: 0 20vw;
 }
 
-*::-webkit-scrollbar {
-    width: 0;
-}
-
 .mobile {
     width: 30px;
-    height: 20px;
+    height: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
-    z-index: 99999;
+    z-index: 99999999;
 }
 
 .linha {
@@ -64,15 +64,15 @@ nav {
 }
 
 .linha:nth-child(1) {
-    top: 0;
+    top: 10%;
 }
 
 .linha:nth-child(3) {
-    bottom: 0;
+    bottom: 10%;
 }
 
 .ativo.linha:nth-child(1) {
-    top: 8px;
+    top: 50%;
     transform: rotate(-45deg);
 }
 
@@ -81,32 +81,38 @@ nav {
 }
 
 .ativo.linha:nth-child(3) {
-    bottom: 10px;
+    bottom: 40%;
     transform: rotate(45deg);
 }
 
 /*----------- HOME -----------*/
 
 .home {
+    z-index: 999;
+    height: 100vh;
     background-position: center;
 }
 
-svg {
-    width: 40px;
+.arrow {
+    width: 2rem;
 }
 
 /*--------------- GALERIA --------------*/
 
 .galeria {
-    height: 100vh;
-    /* overflow: hidden; */
+    overflow: hidden;
+}
+
+.container-galeria h3 {
+    font-size: 3rem;
+}
+
+.container-galeria a {
+    font-size: 1.2rem;
 }
 
 @media (max-width: 480px) {
-    .galeria .foto {
-        /* scale: 1.3; */
-    }
-
+    
     .foto#img1 {
         right: 60%;
         scale: 1.4;
@@ -157,7 +163,7 @@ svg {
 
 #sobre .texto {
     width: 100%;
-    font-size: 1px;
+    font-size: 16px;
     justify-content: baseline;
 }
 
@@ -176,7 +182,7 @@ svg {
 
 .duvida {
     width: 100%;
-    height: 20vh;
+    height: 25vh;
     padding: 20px;
     border-radius: 20px;
 }
@@ -189,15 +195,15 @@ svg {
 .duvida:nth-child(2) p,
 .duvida:nth-child(2) h4 {
     color: #fff;
-    font-weight: 200;
 }
 
 .duvida p {
-    font-size: 1px;
+    font-size: 1rem;
+    font-weight: 300;
 }
 
 .duvida h4 {
-    font-size: 20px;
+    font-size: 1.4rem;
     line-height: 100%;
 }
 
@@ -206,18 +212,19 @@ svg {
 }
 
 .titulo {
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 /*----------- DEPOIMENTOS ------------*/
 
 #depoimentos {
     height: unset;
-    margin-bottom: 40px;
+    margin: 50px 0;
 }
 
 #depoimentos .titulo {
     font-size: 3rem;
+    margin-bottom: 20px;
 }
 
 .container-depoimento {
@@ -236,7 +243,7 @@ svg {
 }
 
 .relato {
-    font-size: 1px;
+    font-size: .7rem;
     overflow-y: scroll;
 }
 
@@ -250,13 +257,15 @@ svg {
 }
 
 .depoimento .nome {
-    font-size: 2px;
+    font-size: 1rem;
+    
 }
 
 /*---------------- INSTAGRAM -------------*/
 
 #instagram {
-    height: 35vw;
+    height: fit-content;
+    padding-top: 40px;
 }
 
 .post {
@@ -266,20 +275,20 @@ svg {
 /*-------------- PREMIAÇÕES ---------------*/
 
 #premios {
-    background-position: 140vw;
+    background-position: 170vw;
 }
 
 .premios img {
-    top: 15%;
-    left: 43%;
-    width: 14vw;
+    top: 12%;
+    left: 42%;
+    width: 17vw;
 }
 
 #premios h3 {
     top: 4%;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 /*-------------- CURSO --------------*/
@@ -315,12 +324,11 @@ svg {
 }
 
 .container p {
-    height: 100px;
     overflow-y: scroll;
 }
 
-.info-titulo {
-    /* font-size: 3vw; */
+.info1 h4 {
+    font-size: 1.3rem;
 }
 
 .info2 {
@@ -336,7 +344,7 @@ svg {
 
 .info4 p {
     width: 100%;
-    font-size: 1px;
+    font-size: 1rem;
 }
 
 .recado {
@@ -344,20 +352,20 @@ svg {
 }
 
 .recado h4 {
-    font-size: 4vw;
+    font-size: 1.4rem;
     text-align: center;
     line-height: 100%;
 }
 
 .recado p {
-    font-size: 1vw;
+    font-size: .8rem;
     width: 80%;
 }
 
 /*------------- RODAPE --------------*/
 
 .rodape {
-    padding: 20px;
+    padding: 10px;
     grid-template-areas:
         "esquerda esquerda esquerda"
         "direita direita direita";
@@ -366,20 +374,22 @@ svg {
 }
 
 .descricao {
-    font-size: 1px;
+    font-size: 1rem;
 }
 
 .descricao h4 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin: 0;
 }
 
-.foto-time {
-    height: 10%;
+.foto_time {
+    height: 100%;
+    aspect-ratio: 1.4/1;
+    margin-left: 0;
 }
 
 .esquerda {
-    gap: 10px;
+    gap: 5px;
 }
 
 .descricao-legenda {
@@ -407,16 +417,17 @@ svg {
 
 .telefone {
     grid-area: telefone;
-    font-size: .5rem;
+    font-size: .7rem;
 }
 
 .email {
     grid-area: email;
-    font-size: .5rem;
+    font-size: .7rem;
 }
 
 .socialmedia {
     grid-area: socialmedia;
+    font-size: 1rem;
+    line-height: 100%;
     margin: 0;
 }
-

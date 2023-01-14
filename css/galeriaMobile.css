@@ -21,7 +21,7 @@
 /*------------- RODAPE --------------*/
 
 .rodape {
-    padding: 20px;
+    padding: 10px;
     grid-template-areas:
         "esquerda esquerda esquerda"
         "direita direita direita";
@@ -30,20 +30,22 @@
 }
 
 .descricao {
-    font-size: 1px;
+    font-size: 1rem;
 }
 
 .descricao h4 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin: 0;
 }
 
-.foto-time {
-    height: 10%;
+.foto_time {
+    height: 100%;
+    aspect-ratio: 1.4/1;
+    margin-left: 0;
 }
 
 .esquerda {
-    gap: 10px;
+    gap: 5px;
 }
 
 .descricao-legenda {
@@ -71,15 +73,17 @@
 
 .telefone {
     grid-area: telefone;
-    font-size: .5rem;
+    font-size: .7rem;
 }
 
 .email {
     grid-area: email;
-    font-size: .5rem;
+    font-size: .7rem;
 }
 
 .socialmedia {
     grid-area: socialmedia;
+    font-size: 1rem;
+    line-height: 100%;
     margin: 0;
 }
