@@ -19,8 +19,6 @@ let img1 = document.getElementById('img1'),
 
 window.addEventListener('scroll', function () {
     var valueY = Math.round(window.scrollY)
-
-    document.getElementById('jsteste').innerHTML = valueY
     const teste = 75000
     img1.style.transform = 'translate(' + teste / valueY + 'px,' + teste / valueY + 'px)'
     img2.style.transform = 'translate(' + valueY / 10 + '%,' + valueY / 100 + '%)'
