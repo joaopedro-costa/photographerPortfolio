@@ -1,0 +1,422 @@
+.menus {
+    position: absolute;
+    background-color: #000;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    top: 0;
+    transform: translateY(-100%);
+    right: 0;
+    z-index: -1;
+    padding-top: 4vh;
+    transition: .5s;
+}
+
+.menu-ativo {
+    transform: translateY(0);
+}
+
+.menus ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3vh 0;
+    font-size: 1.5rem;
+}
+
+ul a {
+    font-weight: 100;
+}
+
+nav img {
+    width: 15rem;
+}
+
+nav {
+    justify-content: space-around;
+    gap: 0 20vw;
+}
+
+*::-webkit-scrollbar {
+    width: 0;
+}
+
+.mobile {
+    width: 30px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 99999;
+}
+
+.linha {
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    transition: .3s;
+}
+
+.linha:nth-child(1) {
+    top: 0;
+}
+
+.linha:nth-child(3) {
+    bottom: 0;
+}
+
+.ativo.linha:nth-child(1) {
+    top: 8px;
+    transform: rotate(-45deg);
+}
+
+.ativo.linha:nth-child(2) {
+    opacity: 0;
+}
+
+.ativo.linha:nth-child(3) {
+    bottom: 10px;
+    transform: rotate(45deg);
+}
+
+/*----------- HOME -----------*/
+
+.home {
+    background-position: center;
+}
+
+svg {
+    width: 40px;
+}
+
+/*--------------- GALERIA --------------*/
+
+.galeria {
+    height: 100vh;
+    /* overflow: hidden; */
+}
+
+@media (max-width: 480px) {
+    .galeria .foto {
+        /* scale: 1.3; */
+    }
+
+    .foto#img1 {
+        right: 60%;
+        scale: 1.4;
+    }
+
+    .foto#img2 {
+        left: 3%;
+    }
+
+    .foto#img3 {
+        scale: 1.3;
+    }
+
+    .foto#img4 {
+        scale: 1.6;
+        top: 62%;
+        left: -15%;
+    }
+
+    .foto#img5 {}
+
+    .foto#img6 {
+        scale: 1.5;
+    }
+
+    .foto#img7 {
+        scale: 2;
+    }
+
+    .foto#img8 {
+        z-index: -1;
+    }
+
+    .foto#img9 {}
+}
+
+/*----------- SOBRE -----------*/
+
+#sobre {
+    margin: 0;
+    flex-direction: column-reverse;
+}
+
+.img {
+    width: 100%;
+    height: 300px;
+}
+
+#sobre .texto {
+    width: 100%;
+    font-size: 1px;
+    justify-content: baseline;
+}
+
+#sobre .texto h4 {
+    text-align: center;
+    font-size: 3rem;
+    line-height: unset;
+}
+
+/*------------ DUVIDAS ------------*/
+
+.container-duvidas {
+    flex-direction: column;
+    gap: 20px;
+}
+
+.duvida {
+    width: 100%;
+    height: 20vh;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.duvida:nth-child(2) {
+    background-color: transparent;
+    border: 2px solid #fff;
+}
+
+.duvida:nth-child(2) p,
+.duvida:nth-child(2) h4 {
+    color: #fff;
+    font-weight: 200;
+}
+
+.duvida p {
+    font-size: 1px;
+}
+
+.duvida h4 {
+    font-size: 20px;
+    line-height: 100%;
+}
+
+.duvida-texto {
+    overflow-y: scroll;
+}
+
+.titulo {
+    font-size: 4rem;
+}
+
+/*----------- DEPOIMENTOS ------------*/
+
+#depoimentos {
+    height: unset;
+    margin-bottom: 40px;
+}
+
+#depoimentos .titulo {
+    font-size: 3rem;
+}
+
+.container-depoimento {
+    width: 100vw;
+    flex-wrap: 50%;
+    gap: 10px;
+}
+
+.depoimento {
+    width: 45%;
+    height: 20vh;
+    flex-direction: column;
+    padding: 20px;
+    gap: 10px 0;
+    border-radius: 20px;
+}
+
+.relato {
+    font-size: 1px;
+    overflow-y: scroll;
+}
+
+.depoimento .perfil {
+    flex-direction: row;
+    gap: 0 10px;
+}
+
+.depoimento .foto {
+    width: 40px;
+}
+
+.depoimento .nome {
+    font-size: 2px;
+}
+
+/*---------------- INSTAGRAM -------------*/
+
+#instagram {
+    height: 35vw;
+}
+
+.post {
+    height: 20vw;
+}
+
+/*-------------- PREMIAÇÕES ---------------*/
+
+#premios {
+    background-position: 140vw;
+}
+
+.premios img {
+    top: 15%;
+    left: 43%;
+    width: 14vw;
+}
+
+#premios h3 {
+    top: 4%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 4rem;
+}
+
+/*-------------- CURSO --------------*/
+
+#curso {
+    padding: 5% 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.intro {
+    height: fit-content;
+    margin-bottom: 8%;
+}
+
+.intro img {
+    width: 40%;
+}
+
+.infos {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    height: fit-content;
+    border-radius: 0;
+    font-size: 1px;
+    padding: 5%;
+}
+
+.container p {
+    height: 100px;
+    overflow-y: scroll;
+}
+
+.info-titulo {
+    /* font-size: 3vw; */
+}
+
+.info2 {
+    color: #000;
+    background-color: #fff;
+}
+
+.info3 {
+    color: #fff;
+    background-color: transparent;
+    border: 2px solid #fff;
+}
+
+.info4 p {
+    width: 100%;
+    font-size: 1px;
+}
+
+.recado {
+    margin: 5% 0;
+}
+
+.recado h4 {
+    font-size: 4vw;
+    text-align: center;
+    line-height: 100%;
+}
+
+.recado p {
+    font-size: 1vw;
+    width: 80%;
+}
+
+/*------------- RODAPE --------------*/
+
+.rodape {
+    padding: 20px;
+    grid-template-areas:
+        "esquerda esquerda esquerda"
+        "direita direita direita";
+    grid-template-rows: 60% 40%;
+    row-gap: 30px;
+}
+
+.descricao {
+    font-size: 1px;
+}
+
+.descricao h4 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.foto-time {
+    height: 10%;
+}
+
+.esquerda {
+    gap: 10px;
+}
+
+.descricao-legenda {
+    height: 100px;
+    overflow-y: scroll;
+}
+
+.direita {
+    margin-bottom: 40px;
+    display: grid;
+    grid-template-areas:
+        "contato         .    "
+        "telefone  socialmedia"
+        " email          .    ";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 33% 33% 33%;
+    place-items: center;
+    gap: 0;
+}
+
+.direita h4 {
+    grid-area: contato;
+    font-size: 1.2rem;
+}
+
+.telefone {
+    grid-area: telefone;
+    font-size: .5rem;
+}
+
+.email {
+    grid-area: email;
+    font-size: .5rem;
+}
+
+.socialmedia {
+    grid-area: socialmedia;
+    margin: 0;
+}
+
