@@ -36,7 +36,7 @@ ul a {
 }
 
 nav img {
-    width: 15rem;
+    width: 45vw;
 }
 
 nav {
@@ -100,6 +100,7 @@ nav {
 /*--------------- GALERIA --------------*/
 
 .galeria {
+    height: 100vh;
     overflow: hidden;
 }
 
@@ -123,6 +124,8 @@ nav {
     }
 
     .foto#img3 {
+        left: -10%;
+        top: -10%;
         scale: 1.3;
     }
 

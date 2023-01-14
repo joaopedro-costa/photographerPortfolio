@@ -1,3 +1,7 @@
+*::-webkit-scrollbar{
+    width: 0;
+}
+
 /*------------- GALERIA --------------*/
 
 #galeria {
@@ -14,8 +18,8 @@
 }
 
 #fullscreen p {
-    top: 20vh;
-    right: 10%;
+    top: -45px;
+    right: 4%;
 }
 
 /*------------- RODAPE --------------*/

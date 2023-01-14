@@ -133,6 +133,7 @@ nav img {
     background-position: center;
     background-size: cover;
     aspect-ratio: 1;
+    position: relative;
 }
 
 #fullscreen p {
@@ -140,8 +141,8 @@ nav img {
     font-size: 2rem;
     font-family: montserrat;
     z-index: 10;
-    top: 9.5%;
-    right: 29%;
+    top: 0;
+    right: -5%;
     color: #fff;
     cursor: pointer;
 }

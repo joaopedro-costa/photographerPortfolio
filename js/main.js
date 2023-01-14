@@ -15,12 +15,12 @@ let img1 = document.getElementById('img1'),
     home = document.getElementById('home'),
     trabalhos = document.getElementById('trabalhos'),
     conquistas = document.getElementById('conquistas'),
-    sobre = document.getElementById('sobre-nos')
+    sobre = document.getElementById('sobre-nos'),
+    sobrePg = document.getElementById('sobre')
 
 window.addEventListener('scroll', function () {
     var valueY = Math.round(window.scrollY)
 
-    document.getElementById('jsteste').innerHTML = valueY
     const teste = 75000
     img1.style.transform = 'translate(' + teste / valueY + 'px,' + teste / valueY + 'px)'
     img2.style.transform = 'translate(' + valueY / 10 + '%,' + valueY / 100 + '%)'
@@ -45,47 +45,55 @@ window.addEventListener('scroll', function () {
     }
 })
 
-window.addEventListener('resize', function () {
-    if (window.screen.width < 1100) {
-        console.log(window.screen.width)
+if (window.screen.width < 1100) {
+    home.addEventListener('click', function () {
+        window.scroll(0, 0)
+        if (menus.classList.contains('menu-ativo')) {
+            menus.classList.remove('menu-ativo')
+        }
+    })
 
-        home.addEventListener('click', function () {
-            window.scroll(0, 0)
-        })
+    trabalhos.addEventListener('click', function () {
+        window.scroll(0, 870)
+        if (menus.classList.contains('menu-ativo')) {
+            menus.classList.remove('menu-ativo')
+        }
+    })
 
-        trabalhos.addEventListener('click', function () {
-            window.scroll(0, 1100)
-        })
+    conquistas.addEventListener('click', function () {
+        window.scroll(0, 3920)
+        if (menus.classList.contains('menu-ativo')) {
+            menus.classList.remove('menu-ativo')
+        }
+    })
 
-        conquistas.addEventListener('click', function () {
-            window.scroll(0, 4290)
-        })
+    sobre.addEventListener('click', function () {
+        window.scroll(0, 1550)
+        if (menus.classList.contains('menu-ativo')) {
+            menus.classList.remove('menu-ativo')
+        }
+    })
+    mobile.addEventListener('click', function () {
+        linha[0].classList.toggle('ativo')
+        linha[1].classList.toggle('ativo')
+        linha[2].classList.toggle('ativo')
+        menus.classList.toggle('menu-ativo')
+    })
+}
+else {
+    home.addEventListener('click', function () {
+        window.scroll(0, 0)
+    })
 
-        sobre.addEventListener('click', function () {
-            window.scroll(0, 2040)
-        })
-        mobile.addEventListener('click', function () {
-            linha[0].classList.toggle('ativo')
-            linha[1].classList.toggle('ativo')
-            linha[2].classList.toggle('ativo')
-            menus.classList.toggle('menu-ativo')
-        })
-    } else {
+    trabalhos.addEventListener('click', function () {
+        window.scroll(0, 1335)
+    })
 
-        home.addEventListener('click', function () {
-            window.scroll(0, 0)
-        })
+    conquistas.addEventListener('click', function () {
+        window.scroll(0, 5190)
+    })
 
-        trabalhos.addEventListener('click', function () {
-            window.scroll(0, 1335)
-        })
-
-        conquistas.addEventListener('click', function () {
-            window.scroll(0, 5190)
-        })
-
-        sobre.addEventListener('click', function () {
-            window.scroll(0, 2360)
-        })
-    }
-})
+    sobre.addEventListener('click', function () {
+        window.scroll(0, 2360)
+    })
+}
